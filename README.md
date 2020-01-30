@@ -171,3 +171,17 @@ We welcome everyone to contribute to PHPWord. Below are some of the things that 
 - [Fork us](https://github.com/PHPOffice/PHPWord/fork) and [request a pull](https://github.com/PHPOffice/PHPWord/pulls) to the [develop](https://github.com/PHPOffice/PHPWord/tree/develop) branch.
 - Submit [bug reports or feature requests](https://github.com/PHPOffice/PHPWord/issues) to GitHub.
 - Follow [@PHPWord](https://twitter.com/PHPWord) and [@PHPOffice](https://twitter.com/PHPOffice) on Twitter.
+
+
+## ADD images to a word template
+# Add images
+    - in docx template add VARIABLES to replace : ${IMAGE}
+    - exemple : 
+            $template = new \PhpOffice\PhpWord\TemplateProcessor('includes/output/DocTrouRemplis.docx');
+            $template->setImg('IMAGE', [
+                'src' => 'includes/input/bou.jpg',
+                'swh' => '500'
+            ]);
+            $template->saveAs('includes/output/coucou.docx');
+
+
